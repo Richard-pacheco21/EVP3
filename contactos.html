@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>contactos</title>
+    <link rel="icon" type="image/jpg" href="img/favicon_falabella.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="ejemplo.css">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    background-image: url('img/fondo_principal.jpg');
+    background-size: cover;  
+}
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+#informacion {
+    width: 45%; 
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.55);
+}
+#informacion h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.tabla {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+.tabla th,
+.tabla td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+.tabla th {
+    background-color: #333;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+}
+.tabla td {
+    background-color: #f9f9f9;
+    text-align: left;
+}
+.tabla td input,
+.tabla td textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+.tabla td textarea {
+    resize: none; 
+    height: 100px; 
+}
+.tabla th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+.tabla td {
+    background-color: #fff;
+}
+.caja.dos {
+    width: 45%; 
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.55);
+}
+.caja.dos h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="search"],
+form input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+form .botones {
+    text-align: center;
+}
+#ubicacion {
+    background-color: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.55);
+}
+#ubicacion h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+#ubicacion p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+/* Mapa */
+#mapa iframe {
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <header id="cabezera">
+            <h1>SAGA FALABELLA</h1>
+            <nav>
+                <ul class="menu1">
+                    <li><a href="index.html"><i class="fa-solid fa-right-to-bracket"></i>Inicio</a></li>
+                    <li><a href="nosotros.html"><i class="fa-solid fa-user-group"></i>NOSOTROS</a></li>
+                    <li><a href="blog.html"><i class="fa-solid fa-book"></i>BLOG</a></li>
+                    <li><a href="galeria.html"><i class="fa-solid fa-image"></i>GALERÍA</a></li>
+                    <li><a href="video.html"><i class="fa-solid fa-video"></i>VIDEOS</a></li><li><a href="contactos.html"><i class="fa-regular fa-address-card"></i>CONTACTOS</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="contenedor">
+            <div id="informacion">
+                <h2>INFORMACION DE CONTACTO</h2>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>DIRECCION:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea id="direccion" name="direccion" placeholder="Av. Nicolás Ayllón, Ate..." rows="4"></textarea></td>
+                        </tr>
+                        <tr>
+                            <th>TELEFONO:</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="telefono" name="telefono" placeholder="601 587 8002"></td>
+                        </tr>
+                        <tr>
+                            <th>EMAIL:</th>
+                        </tr>
+                        <tr>
+                            <td><input type="email" id="email" name="email" placeholder="datos.personales@falabella.com"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+                <table class="tabla">
+                    <h2>HORARIO DE ATENCION DE FORMA PRESENCIAL</h2>
+                    <thead>
+                        <tr>
+                            <th>AREA DE VENTAS: <br> De lunes a domingo de 9AM a 10PM</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="caja dos">
+                <h3>Datos de Texto</h3>
+                <form method="get" name="form2">
+                    <div>
+                        Nombre Y Apellido<input type="text" name="nombre" placeholder="Ingrese su nombre y apellido"><br><br>
+                        Celular <input type="tel" name="celular" placeholder="999 999 999" size="9" required><br><br>
+                        Correo electronico<input type="email" name="email" placeholder="nombre@dominio.com"><br><br>
+                        RUC-Empresa(opcional)<input type="url" name="web" placeholder="ingrese el RUC"><br><br>
+                        Mensaje <input type="search" name="buscar" placeholder="detalle su experiencia a continuación" size="15"><br><br>
+                    </div>
+                    <div class="botones">
+                        <input type="submit" value="enviar" class="btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+        <div id="ubicacion">
+            <h3>MI UBICACION</h3>
+            <P>Falabella Puruchuco</P>
+            <P>Av. Nicolás Ayllón 4770, Ate</P>
+            <div id="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.0302679198867!2d-76.93711640321045!3d-12.041437199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c71dca9e5b5d%3A0x9b33514e92c04f01!2sFalabella%20Puruchuco!5e0!3m2!1ses-419!2spe!4v1731531551291!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <footer>
+            <nav>
+                <ul class="redes1">
+                    <li><a href="https://x.com/i/flow/login?redirect_after_login=%2Ffalabella_pe"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/falabellacom.pe"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/falabella_pe/?hl=es-la"><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UClsnN4ckpsjrRXQr3WlldpA"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </nav>
+        </footer>
+    </main>
+</body>
+</html>
+
